@@ -1,0 +1,917 @@
+@import "./reset.css";
+
+
+/* dm-sans-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/dm-sans-v15-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/dm-sans-v15-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+/* nav */
+
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0px 50px 0px;
+}
+
+.nav .container {
+    padding: 17px 15px;
+    max-width: 1400px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 26px 0;
+    background-color: #191919;
+    z-index: 9;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+
+.nav-row {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 70px;
+    justify-content: space-between;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 10px;
+    margin-right: 20px;
+}
+
+.nav-list__link {
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+
+    transition: color 0.5s;
+}
+
+.nav-list__link:hover {
+    color: #118DA8;
+}
+
+.nav-list__item {
+    transition: transform 0.2s;
+}
+
+.nav-list__item:active {
+    transform: translateY(3px);
+}
+
+/* header */
+
+.header {
+    padding: 133px 0px 0px;
+    background-color: #191919;
+}
+
+.header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 60px;
+    margin: auto;
+}
+
+.header-img {
+    flex-grow: 1;
+    margin-left: -23px;
+    max-width: 650px;
+    max-height: 873.44px;
+}
+
+.header-text {
+    max-width: 528px;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 88px;
+    letter-spacing: 3.2px;
+    margin-bottom: 74px;
+}
+
+.next {
+    font-size: 75px;
+    position: relative;
+}
+
+.next::before {
+    content: "";
+    position: absolute;
+    background-image: url("../imges/svg/Vector.svg");
+    background-repeat: no-repeat;
+    top: 85px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.level {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.header-sites {
+    margin-left: 22px;
+}
+
+.header-desc {
+    margin-left: 22px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.socials {
+    display: flex;
+    column-gap: 17px;
+}
+
+.social__img {
+    width: 32px;
+
+    transition: transform 0.5s;
+}
+
+.social__img:hover {
+    transform: scale(120%);
+}
+
+/* episodes */
+
+.episodes {
+    padding-bottom: 160px;
+}
+
+.main {
+    background-color: #191919;
+}
+
+.episodes-toc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.episodes-title {
+    padding: 93px 0 66.5px;
+
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 79.2px;
+    letter-spacing: 2.9px;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 178px;
+    height: 51px;
+    background-color: #118DA8;
+    border-radius: 6px;
+
+    font-size: 17px;
+    color: white;
+
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background-color: #06748c;
+}
+
+.btn:active {
+    transform: translateY(3px);
+}
+
+.episodes-btn {
+    margin-top: 136px;
+}
+
+.episodes-cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+
+.episodes-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+    background-color: #000;
+    border-radius: 32px;
+    column-gap: 53px;
+}
+
+.episodes-card__img {
+    width: 389px;
+    height: 465px;
+}
+
+.episodes-card__img-small {
+    width: 389px;
+    height: 432px;
+}
+
+.episodes-card__design {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 73px;
+    height: 27px;
+    background-color: #191919;
+    border-radius: 6px;
+
+    font-size: 18px;
+
+    margin-bottom: 48px;
+}
+
+.episodes-card__design-long {
+    width: 136px;
+    height: 27px;
+}
+
+.episodes-card__sequence {
+    font-size: 17px;
+    line-height: 27px;
+    color: #118DA8;
+    margin-bottom: 18px;
+}
+
+.episodes-card__title {
+    font-size: 64px;
+    line-height: 70.4px;
+    letter-spacing: 2.6px;
+    margin-bottom: 28px;
+}
+
+.episodes-card__text {
+    font-size: 22px;
+    line-height: 33px;
+    opacity: 70%;
+    margin-bottom: 18px;
+}
+
+.episodes-card__btn {
+    width: 208px;
+    height: 51px;
+}
+
+/* jacob */
+
+.jacob {
+    display: flex;
+    column-gap: 94px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.jacob-arrow {
+    max-width: 113px;
+    margin-top: 148px;
+    margin-bottom: 20px;
+}
+
+.jacob-meet {
+    font-size: 18px;
+    line-height: 27px;
+    color: #118DA8;
+}
+
+.jacob-title {
+    font-size: 65px;
+    line-height: 79.2px;
+    letter-spacing: 2.9px;
+    margin-bottom: 28px;
+}
+
+.jacob-text {
+    font-size: 22px;
+    line-height: 33px;
+    max-width: 556px;
+    opacity: 70%;
+}
+
+.jacob-text:nth-child(4) {
+    margin-bottom: 33px;
+}
+
+.jacob-photo {
+    margin: auto;
+}
+
+.jacob-img {
+    border-radius: 13px;
+}
+
+/* sub */
+
+.sub {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    min-height: 387px;
+    flex-wrap: wrap;
+    column-gap: 20px;
+
+    background-color: #000;
+    border-radius: 32px;
+    position: relative;
+}
+
+.sub-img {
+    position: absolute;
+    margin-top: 322px;
+    margin-left: -45px;
+}
+
+.sub-text {
+    font-size: 18px;
+    line-height: 27px;
+    color: #118DA8;
+    margin-top: 59px;
+    margin-left: 60px;
+}
+
+.sub-title {
+    font-size: 72px;
+    line-height: 79.2px;
+    letter-spacing: 2.9px;
+    max-width: 431px;
+    margin-left: 60px;
+}
+
+.sub-desc {
+    flex-grow: 1;
+}
+
+.sub-form {
+    max-width: 522px;
+    max-height: 252px;
+    margin-right: 60px;
+    margin-top: 59px;
+}
+
+.sub-field {
+    width: 522px;
+    height: 82px;
+    border-radius: 6px;
+    background-color: #191919;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 28.8px;
+    padding-left: 19px;
+}
+
+.sub-but {
+    width: 87px;
+    height: 48px;
+    border-radius: 6px;
+    background-color: #118DA8;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28.8px;
+
+    transition: background-color 0.5s;
+}
+
+.sub-but:hover {
+    background-color: #06748c;
+}
+
+.sub-but:active {
+    transform: translateY(3px);
+}
+
+/* reviews */
+
+.reviews {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 16px;
+    column-gap: 16px;
+    justify-content: space-around;
+
+    padding: 100px 0 100px 0;
+}
+
+.review {
+    width: 421px;
+    height: 321px;
+    border-radius: 32px;
+    background-color: #000;
+
+}
+
+.review-star {
+    margin: 54px 0 22px 50px;
+}
+
+.review-title {
+    max-width: 320px;
+    font-size: 36px;
+    line-height: 43.2px;
+    margin-left: 50px;
+    margin-bottom: 19px;
+}
+
+.review-name {
+    font-size: 24px;
+    line-height: 28.8px;
+    opacity: 70%;
+
+    margin-left: 50px;
+}
+
+.review-big {
+    height: 364px;
+}
+
+/* footer */
+
+footer {
+    background-color: #191919;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    column-gap: 16px;
+    padding-top: 100px;
+    padding-bottom: 116px;
+    margin: auto;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo__link img {
+    width: 224px;
+    height: 46px;
+}
+
+.footer-logo__link {
+    padding-right: 234px;
+}
+
+.footer-icon+.footer-icon {
+    margin-left: 10px;
+}
+
+.footer-icon__img {
+    transition: transform 0.5s;
+}
+
+.footer-icon__img:hover {
+    transform: scale(120%);
+}
+
+.footer-list__text {
+    margin-bottom: 10px;
+}
+
+.footer-lists {
+    display: flex;
+    column-gap: 16px;
+}
+
+.footer-list__link {
+    font-size: 17px;
+    line-height: 27px;
+    color: white;
+
+    transition: color 0.5s;
+}
+
+.footer-list__link:hover {
+    color: #118DA8;
+}
+
+.footer-list {
+    width: 178px;
+}
+
+.social {
+    flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+    .jacob-arrow {
+        width: 90px;
+        height: 90p;
+        margin-top: 0px;
+    }
+
+    .header-img {
+        width: 550px;
+    }
+
+    .header-desc {
+        font-size: 18px;
+    }
+
+    .sub {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-form {
+        margin-right: 0px;
+        margin-bottom: 60px;
+    }
+
+    .sub-title {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+        max-width: none;
+    }
+
+    .sub-text {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .sub-img {
+        left: 0;
+        bottom: -30px;
+    }
+
+    .sub-but {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1084px) {
+    .header-text {
+        font-size: 50px;
+    }
+
+    .next {
+        font-size: 50px;
+        display: inline-block;
+        height: 75px;
+    }
+
+    .level {
+        font-size: 50px;
+    }
+
+    .next::before {
+        top: 100%;
+    }
+
+    .header-img {
+        width: 430px;
+        margin-left: -15px;
+    }
+
+    .episodes-title {
+        font-size: 50px;
+    }
+
+    .episodes-card {
+        flex-wrap: wrap;
+    }
+
+    .episodes-card__title {
+        font-size: 54px;
+    }
+
+    .episodes-card__desc {
+        text-align: center;
+    }
+
+    .episodes-card__btn {
+        margin: auto;
+    }
+
+    .episodes-card__design {
+        margin: 20px auto;
+    }
+
+    .jacob-title {
+        font-size: 52px;
+    }
+
+    .sub-title {
+        font-size: 50px;
+    }
+
+    .sub-form {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+
+    .footer-lists {
+        order: 9;
+    }
+}
+
+@media (max-width: 870px) {
+
+    .next {
+        height: initial;
+        font-size: 40px;
+    }
+
+    .level {
+        font-size: 40px;
+    }
+
+    .header-desc {
+        font-size: 15px;
+    }
+
+    .next::before {
+        top: 100%;
+    }
+
+    .episodes-title {
+        padding-top: 50px;
+    }
+
+    .header-text {
+        line-height: initial;
+        font-size: 40px;
+    }
+
+    .episodes {
+        padding-bottom: 0px;
+    }
+
+    .jacob {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 30px;
+    }
+
+    .jacob-desc {
+        order: 9;
+        text-align: center;
+    }
+
+    .jacob-arrow {
+        display: none;
+    }
+
+    .sub {
+        margin: 0;
+    }
+
+    .header-img {
+        width: 350px;
+    }
+
+    .header-text {
+        margin-bottom: 40px;
+    }
+
+    .episodes-card__img {
+        width: 290px;
+        height: 350px;
+    }
+
+    .episodes-card__title {
+        font-size: 34px;
+        line-height: initial;
+    }
+
+    .episodes-card__text {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .jacob-title {
+        font-size: 34px;
+        line-height: initial;
+    }
+
+    .jacob-text {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .social {
+        order: 10;
+    }
+}
+
+@media (max-width: 730px) {
+
+    .header-text {
+        text-align: center;
+    }
+
+    .header-desc {
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .header-sites {
+        display: flex;
+        justify-content: center;
+    }
+
+    .episodes-toc {
+        padding-top: 100px;
+    }
+
+    .episodes-title {
+        padding: 20px 15px 20px 0;
+        font-size: 40px;
+    }
+
+    .episodes-btn {
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+
+    .episodes-card:nth-child(1) {
+        margin-top: 20px;
+    }
+
+    .header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .jacob {
+        padding: 70px 0;
+    }
+
+    .sub-field {
+        width: initial;
+    }
+
+    .sub-text {
+        margin-top: 25px;
+    }
+
+    .sub-text {
+        font-size: 15px;
+    }
+
+    .sub-title {
+        line-height: initial;
+    }
+
+    .sub-form {
+        margin-top: 30px;
+    }
+
+    .sub-field {
+        display: block;
+        width: initial;
+        height: 60px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .episodes-title {
+        text-align: center;
+        padding: initial;
+        padding-bottom: 40px;
+    }
+
+    .nav {
+        padding: 0px;
+    }
+
+    .nav-row {
+        justify-content: center;
+    }
+
+    .footer-logo__link {
+        padding: initial;
+    }
+
+    .footer-list {
+        width: 130px;
+    }
+
+    .episodes-title {
+        margin: auto;
+    }
+
+    .episodes-card__img {
+        width: 200px;
+        height: 230px;
+    }
+
+    .header-desc {
+        padding-left: 0px;
+    }
+
+    .episodes-btn {
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 417px) {
+
+    .episodes-title {
+        line-height: initial;
+    }
+
+    .header {
+        padding-top: 170px;
+    }
+
+    .episodes-card__title {
+        font-size: 24px;
+    }
+
+    .episodes-card__text {
+        font-size: 14px;
+    }
+
+    .sub-title {
+        font-size: 30px;
+    }
+
+    .review-title {
+        font-size: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .review-name {
+        font-size: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .review-big:nth-child(4), .review-big:nth-child(5) {
+        height: 300px;
+    }
+
+}
